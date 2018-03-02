@@ -88,13 +88,13 @@ public class Patient {
 
 	@Override
 	public String toString() {
-		return "Patient{" +
-				"nom='" + nom + '\'' +
-				", prenom='" + prenom + '\'' +
-				", caloriesMax=" + caloriesMax +
-				", calciumMin=" + calciumMin +
-				", vitaminesCMin=" + vitaminesCMin +
-				", ferMin=" + ferMin +
-				'}';
+		return "Patient{"
+				+ "nom='" + nom + '\''
+				+ ", prenom='" + prenom + '\''
+				+ ", caloriesMax=" + caloriesMax
+				+ ", calciumMin=" + calciumMin
+				+ ", vitaminesCMin=" + vitaminesCMin
+				+ ", ferMin=" + ferMin
+				+ '}';
 	}
 }

@@ -27,9 +27,9 @@ public class Prescription {
 
 	@Override
 	public String toString() {
-		return "Prescription{" +
-				"quantitee=" + quantitee +
-				", aliment=" + aliment +
-				'}';
+		return "Prescription{"
+				+ "quantitee=" + quantitee
+				+ ", aliment=" + aliment
+				+ '}';
 	}
 }

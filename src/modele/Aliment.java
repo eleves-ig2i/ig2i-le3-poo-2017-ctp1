@@ -24,7 +24,15 @@ public class Aliment {
 	 * @param vitamineC TODO
 	 * @param fer TODO
 	 */
-	public Aliment(int id, String nom, int satisfaction, int calories, int calcium, int vitamineC, int fer) {
+	public Aliment(
+					int id,
+					String nom,
+					int satisfaction,
+					int calories,
+					int calcium,
+					int vitamineC,
+					int fer
+	) {
 		this.id = id;
 		this.nom = nom;
 		this.satisfaction = satisfaction;
@@ -65,13 +73,13 @@ public class Aliment {
 
 	@Override
 	public String toString() {
-		return "Aliment{" +
-				"nom='" + nom + '\'' +
-				", satisfaction=" + satisfaction +
-				", calories=" + calories +
-				", calcium=" + calcium +
-				", vitamineC=" + vitamineC +
-				", fer=" + fer +
-				'}';
+		return "Aliment{"
+				+ "nom='" + nom + '\''
+				+ ", satisfaction=" + satisfaction
+				+ ", calories=" + calories
+				+ ", calcium=" + calcium
+				+ ", vitamineC=" + vitamineC
+				+ ", fer=" + fer
+				+ '}';
 	}
 }
