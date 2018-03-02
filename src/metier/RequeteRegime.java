@@ -1,13 +1,20 @@
 package metier;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 import modele.Aliment;
 import modele.Patient;
 import modele.Prescription;
 
-import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
-
+/**
+ * TODO.
+ * @author user
+ */
 public class RequeteRegime {
 
 	private Connection connection;
@@ -21,7 +28,9 @@ public class RequeteRegime {
 		return instance;
 	}
 
-
+	/**
+	 * TODO.
+	 */
 	public RequeteRegime() {
 		try {
 			connect();
@@ -56,7 +65,12 @@ public class RequeteRegime {
 		return ls;
 	}
 
-
+	/**
+	 * TODO.
+	 * @param nomprenom
+	 * @return
+	 * @throws SQLException 
+	 */
 	public List<Patient> ensPatients(String nomprenom) throws SQLException {
 		ArrayList<Patient> ls = new ArrayList<>();
 		String query = "SELECT * FROM patient  WHERE UPPER(nom) LIKE ? OR UPPER(prenom) LIKE ?";

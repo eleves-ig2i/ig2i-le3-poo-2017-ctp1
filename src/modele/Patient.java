@@ -2,7 +2,10 @@ package modele;
 
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+ * 
+ * @author user
+ */
 public class Patient {
 
 	private int id;
@@ -15,6 +18,16 @@ public class Patient {
 
 	private ArrayList<Prescription> prescriptions = new ArrayList<>(); //immutable
 
+	/**
+	 * 
+	 * @param id
+	 * @param nom
+	 * @param prenom
+	 * @param caloriesMax
+	 * @param calciumMin
+	 * @param vitaminesCMin
+	 * @param ferMin 
+	 */
 	public Patient(int id, String nom, String prenom, int caloriesMax, int calciumMin, int vitaminesCMin, int ferMin) {
 		this.id = id;
 		this.nom = nom;

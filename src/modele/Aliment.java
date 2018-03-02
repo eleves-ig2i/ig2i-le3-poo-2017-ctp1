@@ -1,5 +1,9 @@
 package modele;
 
+/**
+ * TODO.
+ * @author user
+ */
 public class Aliment {
 
 	private int id;
@@ -10,6 +14,16 @@ public class Aliment {
 	private int vitamineC;
 	private int fer;
 
+	/**
+	 * TODO.
+	 * @param id TOOD
+	 * @param nom TODO
+	 * @param satisfaction TODO
+	 * @param calories TODO
+	 * @param calcium TODO
+	 * @param vitamineC TODO
+	 * @param fer TODO
+	 */
 	public Aliment(int id, String nom, int satisfaction, int calories, int calcium, int vitamineC, int fer) {
 		this.id = id;
 		this.nom = nom;
