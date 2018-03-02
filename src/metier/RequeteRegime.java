@@ -71,9 +71,8 @@ public class RequeteRegime {
 
 	/**
 	 * TODO.
-	 * 
 	 * @param nomprenom TODO
-	 * @return
+	 * @return TODO
 	 * @throws SQLException TODO
 	 */
 	public List<Patient> ensPatients(String nomprenom) throws SQLException {
