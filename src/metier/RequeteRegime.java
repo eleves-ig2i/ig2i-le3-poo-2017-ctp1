@@ -59,7 +59,7 @@ public class RequeteRegime {
 
     public List<Patient> ensPatients(String nomprenom) throws SQLException {
         ArrayList<Patient> ls = new ArrayList<>();
-        String query = "SELECT * FROM patient  WHERE UPPER(nom) LIKE ? OR UPPER(prenom) LIKE ?;";
+        String query = "SELECT * FROM patient  WHERE UPPER(nom) LIKE ? OR UPPER(prenom) LIKE ?";
         PreparedStatement statement = connection.prepareStatement(query);
         nomprenom = nomprenom.toUpperCase();
         nomprenom = "%" + nomprenom + "%";
@@ -86,20 +86,22 @@ public class RequeteRegime {
         PreparedStatement statement = connection.prepareStatement(query);
         statement.setInt(1, p.getId());
         ResultSet resultSet = statement.executeQuery();
+				
         while(resultSet.next()){
             p.addPrescription(new Prescription(resultSet.getInt("nPrescription"),
                     resultSet.getInt("quantite"),
                     resultSet.getInt("nAliment")));
         }
+				System.out.println(p);
         resultSet.close();
         statement.close();
     }
 
     private void connect() throws ClassNotFoundException, SQLException {
-        String driverClass = "com.mysql.jdbc.Driver";
-        String urlDatabase = "jdbc:mysql://localhost:3306/dev";
-        String user = "root";
-        String pwd = "toor";
+        String driverClass = "org.apache.derby.jdbc.ClientDriver";
+        String urlDatabase = "jdbc:derby://localhost:1527/database";
+        String user = "username";
+        String pwd = "password";
         Class.forName(driverClass);
         connection = DriverManager.getConnection(urlDatabase, user, pwd);
 
