@@ -28,6 +28,9 @@ public class Accueil extends DerbyFrame {
 
 	private static Accueil instance;
 
+	/**
+	 * TODO.
+	 */
 	public Accueil() {
 		super();
 		initConnexion();

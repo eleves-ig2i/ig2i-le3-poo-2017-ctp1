@@ -3,8 +3,8 @@ package modele;
 import java.util.ArrayList;
 import java.util.List;
 /**
- * 
- * @author user
+ * TODO.
+ * @author user TODO
  */
 public class Patient {
 
@@ -19,14 +19,14 @@ public class Patient {
 	private ArrayList<Prescription> prescriptions = new ArrayList<>(); //immutable
 
 	/**
-	 * 
-	 * @param id
-	 * @param nom
-	 * @param prenom
-	 * @param caloriesMax
-	 * @param calciumMin
-	 * @param vitaminesCMin
-	 * @param ferMin 
+	 * TODO.
+	 * @param id TODO
+	 * @param nom TODO
+	 * @param prenom TODO
+	 * @param caloriesMax TODO
+	 * @param calciumMin TODO
+	 * @param vitaminesCMin TODO
+	 * @param ferMin TODO
 	 */
 	public Patient(int id, String nom, String prenom, int caloriesMax, int calciumMin, int vitaminesCMin, int ferMin) {
 		this.id = id;
@@ -68,7 +68,8 @@ public class Patient {
 
 	/**
 	 * Le but de cette copie de liste est de rendre immutable la liste prescription.
-	 * Elle est cependant éditable via les méthodes {@link #addPrescription} et {@link #removePrescription}.
+	 * Elle est cependant éditable via les méthodes 
+	 * {@link #addPrescription} et {@link #removePrescription}.
 	 *
 	 * @return Une copie de la liste des prescriptions
 	 */

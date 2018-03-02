@@ -54,7 +54,7 @@ public class FicheRegime extends DerbyFrame {
 	private void initComponent() {
 		this.panel.setLayout(null);
 
-		for (Aliment aliment : alimentList) {
+		for (Aliment aliment : this.alimentList) {
 			JPanel sPane = new JPanel();
 			sPane.setBackground(panel.getBackground());
 			int value = getPrescriptionValue(aliment);

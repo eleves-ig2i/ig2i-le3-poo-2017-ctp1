@@ -21,6 +21,10 @@ public class RequeteRegime {
 
 	private static RequeteRegime instance;
 
+	/**
+	 * TODO.
+	 * @return 
+	 */
 	public static RequeteRegime getInstance() {
 		if (instance == null) {
 			instance = new RequeteRegime();
@@ -67,7 +71,7 @@ public class RequeteRegime {
 
 	/**
 	 * TODO.
-	 * @param nomprenom
+	 * @param nomprenom TODO
 	 * @return
 	 * @throws SQLException 
 	 */
@@ -95,18 +99,23 @@ public class RequeteRegime {
 		return ls;
 	}
 
+	/**
+	 * TODO.
+	 * @param p TODO
+	 * @throws SQLException 
+	 */
 	public void addAllPrescriptionsToPatient(Patient p) throws SQLException {
 		String query = "SELECT * FROM prescription WHERE nPatient = ?";
 		PreparedStatement statement = connection.prepareStatement(query);
 		statement.setInt(1, p.getId());
 		ResultSet resultSet = statement.executeQuery();
 				
-		while(resultSet.next()){
+		while(resultSet.next()) {
 			p.addPrescription(new Prescription(resultSet.getInt("nPrescription"),
 					resultSet.getInt("quantite"),
 					resultSet.getInt("nAliment")));
 		}
-				System.out.println(p);
+		System.out.println(p);
 		resultSet.close();
 		statement.close();
 	}
