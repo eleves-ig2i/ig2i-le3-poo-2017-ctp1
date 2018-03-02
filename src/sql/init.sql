@@ -14,7 +14,7 @@ CREATE table Aliment (
 
 CREATE table PATIENT (
 	nPatient int,
-	nom varchar(500), 
+	nom varchar(500),
 	prenom varchar(500),
 	caloriesMax int,
 	calciumMin int,

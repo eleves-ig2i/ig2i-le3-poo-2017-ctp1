@@ -1,9 +1,9 @@
 package vuecontrole;
 
+import java.awt.Component;
+import javax.swing.JLabel;
+import javax.swing.JList;
 import modele.Patient;
-
-import javax.swing.*;
-import java.awt.*;
 
 /**
  * Project derbyassurance.
@@ -34,7 +34,13 @@ public class PatientCellRender extends JLabel implements javax.swing.ListCellRen
 	 * @see ListModel
 	 */
 	@Override
-	public Component getListCellRendererComponent(JList<? extends Patient> list, Patient value, int index, boolean isSelected, boolean cellHasFocus) {
+	public Component getListCellRendererComponent(
+			JList<? extends Patient> list,
+			Patient value,
+			int index,
+			boolean isSelected,
+			boolean cellHasFocus
+	) {
 		if (isSelected) {
 			setBackground(list.getSelectionBackground());
 			setForeground(list.getSelectionForeground());
