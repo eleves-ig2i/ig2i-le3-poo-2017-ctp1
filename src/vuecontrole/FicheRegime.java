@@ -56,7 +56,7 @@ public class FicheRegime extends DerbyFrame {
 
 		for (Aliment aliment : this.alimentList) {
 			JPanel sPane = new JPanel();
-			sPane.setBackground(panel.getBackground());
+			sPane.setBackground(this.panel.getBackground());
 			int value = getPrescriptionValue(aliment);
 			int max = patient.getCaloriesMax() / aliment.getCalories();
 			if (max > 10) {

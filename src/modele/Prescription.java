@@ -6,6 +6,12 @@ public class Prescription {
 	private int quantitee;
 	private int aliment;
 
+	/**
+	 * TODO.
+	 * @param id TODO
+	 * @param quantitee TODO
+	 * @param aliment TODO
+	 */
 	public Prescription(int id, int quantitee, int aliment) {
 		this.id = id;
 		this.quantitee = quantitee;

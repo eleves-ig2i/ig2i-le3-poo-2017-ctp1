@@ -2,6 +2,7 @@ package modele;
 
 import java.util.ArrayList;
 import java.util.List;
+
 /**
  * TODO.
  * @author user TODO
@@ -28,7 +29,15 @@ public class Patient {
 	 * @param vitaminesCMin TODO
 	 * @param ferMin TODO
 	 */
-	public Patient(int id, String nom, String prenom, int caloriesMax, int calciumMin, int vitaminesCMin, int ferMin) {
+	public Patient(
+					int id,
+					String nom,
+					String prenom,
+					int caloriesMax,
+					int calciumMin,
+					int vitaminesCMin,
+					int ferMin
+	) {
 		this.id = id;
 		this.nom = nom;
 		this.prenom = prenom;

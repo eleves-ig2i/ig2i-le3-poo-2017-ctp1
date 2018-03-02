@@ -71,6 +71,7 @@ public class RequeteRegime {
 
 	/**
 	 * TODO.
+	 * 
 	 * @param nomprenom TODO
 	 * @return
 	 * @throws SQLException 
@@ -110,10 +111,12 @@ public class RequeteRegime {
 		statement.setInt(1, p.getId());
 		ResultSet resultSet = statement.executeQuery();
 				
-		while(resultSet.next()) {
-			p.addPrescription(new Prescription(resultSet.getInt("nPrescription"),
+		while (resultSet.next()) {
+			p.addPrescription(
+					new Prescription(resultSet.getInt("nPrescription"),
 					resultSet.getInt("quantite"),
-					resultSet.getInt("nAliment")));
+					resultSet.getInt("nAliment"))
+			);
 		}
 		System.out.println(p);
 		resultSet.close();
