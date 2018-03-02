@@ -68,7 +68,7 @@ public class Patient {
 
 	/**
 	 * Le but de cette copie de liste est de rendre immutable la liste prescription.
-	 * Elle est cependant éditable via les méthodes {@link #addPrescription} et {@link #removePrescription}
+	 * Elle est cependant éditable via les méthodes {@link #addPrescription} et {@link #removePrescription}.
 	 *
 	 * @return Une copie de la liste des prescriptions
 	 */
@@ -76,12 +76,20 @@ public class Patient {
 		return new ArrayList<>(prescriptions);
 	}
 
+	/**
+	 * TODO.
+	 * @param prescription TODO
+	 */
 	public void addPrescription(Prescription prescription) {
 		if (!prescriptions.contains(prescription)) {
 			prescriptions.add(prescription);
 		}
 	}
 
+	/**
+	 * TODO.
+	 * @param prescription TODO
+	 */
 	public void removePrescription(Prescription prescription) {
 		prescriptions.remove(prescription);
 	}

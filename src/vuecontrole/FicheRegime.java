@@ -1,20 +1,20 @@
 package vuecontrole;
 
-import modele.Aliment;
-import modele.Patient;
-import modele.Prescription;
-
-import javax.swing.*;
 import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import javax.swing.BorderFactory;
+import javax.swing.JPanel;
+import javax.swing.JSlider;
+import javax.swing.JTextArea;
+import javax.swing.WindowConstants;
+import modele.Aliment;
+import modele.Patient;
+import modele.Prescription;
 
 /**
- * <br>
- * Author : <a href="https://git-01.dev.uhcwork.net/u/Rapace">Wazo</a><br>
- * Project DerbyRegime
- * <br>
+ * Project DerbyRegime.
  */
 public class FicheRegime extends DerbyFrame {
 
@@ -26,7 +26,10 @@ public class FicheRegime extends DerbyFrame {
 
 	private JTextArea regimeInfo;
 
-
+	/**
+	 * TODO.
+	 * @param patient TODO
+	 */
 	public FicheRegime(Patient patient) {
 		super();
 		if (patient == null) {
@@ -49,7 +52,7 @@ public class FicheRegime extends DerbyFrame {
 	}
 
 	private void initComponent() {
-		panel.setLayout(null);
+		this.panel.setLayout(null);
 
 		for (Aliment aliment : alimentList) {
 			JPanel sPane = new JPanel();
@@ -92,9 +95,9 @@ public class FicheRegime extends DerbyFrame {
 	}
 
 	/**
-	 * Définit de style de slider
+	 * Définit de style de slider.
 	 *
-	 * @param slider
+	 * @param slider TODO
 	 */
 	private void setSliderStyle(JSlider slider) {
 		slider.setBackground(panel.getBackground());
@@ -122,10 +125,18 @@ public class FicheRegime extends DerbyFrame {
 			fer += a.getFer() * qtt;
 			satisfaction += a.getSatisfaction() * qtt;
 		}
-		String indic = "Calories : " + calories + " (" + getComparator(calories, patient.getCaloriesMax()) + " " + patient.getCaloriesMax() + ")\n"
-				+ "Calcium : " + calcium + " (" + getComparator(calcium, patient.getCalciumMin()) + " " + patient.getCalciumMin() + ")\n"
-				+ "Vitamines C : " + vitamineC + " (" + getComparator(vitamineC, patient.getVitaminesCMin()) + " " + patient.getVitaminesCMin() + ")\n"
-				+ "Fer : " + fer + " (" + getComparator(fer, patient.getFerMin()) + " " + patient.getFerMin() + ")\n"
+		String indic = "Calories : " + calories + " ("
+				+ getComparator(calories, patient.getCaloriesMax())
+				+ " " + patient.getCaloriesMax() + ")\n"
+				+ "Calcium : " + calcium + " ("
+				+ getComparator(calcium, patient.getCalciumMin())
+				+ " " + patient.getCalciumMin() + ")\n"
+				+ "Vitamines C : " + vitamineC + " ("
+				+ getComparator(vitamineC, patient.getVitaminesCMin())
+				+ " " + patient.getVitaminesCMin() + ")\n"
+				+ "Fer : " + fer + " ("
+				+ getComparator(fer, patient.getFerMin())
+				+ " " + patient.getFerMin() + ")\n"
 				+ "Satisfaction : " + satisfaction;
 		regimeInfo.setText(indic);
 	}
