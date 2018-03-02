@@ -55,8 +55,8 @@ public class FicheRegime extends DerbyFrame {
 		this.panel.setLayout(null);
 
 		for (Aliment aliment : this.alimentList) {
-			JPanel sPane = new JPanel();
-			sPane.setBackground(this.panel.getBackground());
+			JPanel pane = new JPanel();
+			pane.setBackground(this.panel.getBackground());
 			int value = getPrescriptionValue(aliment);
 			int max = patient.getCaloriesMax() / aliment.getCalories();
 			if (max > 10) {
@@ -64,11 +64,11 @@ public class FicheRegime extends DerbyFrame {
 			}
 			JSlider slider = new JSlider(0, max, value);
 			sliders.put(aliment, slider);
-			sPane.add(slider);
+			pane.add(slider);
 			setSliderStyle(slider);
-			sPane.setBorder(BorderFactory.createTitledBorder(aliment.getNom() + " (100g)"));
-			sPane.setBounds(10, 30 + (nbr - 1) * 15 + nbr * 75, 300, 75);
-			panel.add(sPane);
+			pane.setBorder(BorderFactory.createTitledBorder(aliment.getNom() + " (100g)"));
+			pane.setBounds(10, 30 + (nbr - 1) * 15 + nbr * 75, 300, 75);
+			this.panel.add(pane);
 			nbr++;
 		}
 		regimeInfo = new JTextArea();

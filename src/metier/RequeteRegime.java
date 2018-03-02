@@ -74,7 +74,7 @@ public class RequeteRegime {
 	 * 
 	 * @param nomprenom TODO
 	 * @return
-	 * @throws SQLException 
+	 * @throws SQLException TODO
 	 */
 	public List<Patient> ensPatients(String nomprenom) throws SQLException {
 		ArrayList<Patient> ls = new ArrayList<>();
@@ -103,7 +103,7 @@ public class RequeteRegime {
 	/**
 	 * TODO.
 	 * @param p TODO
-	 * @throws SQLException 
+	 * @throws SQLException TODO
 	 */
 	public void addAllPrescriptionsToPatient(Patient p) throws SQLException {
 		String query = "SELECT * FROM prescription WHERE nPatient = ?";
