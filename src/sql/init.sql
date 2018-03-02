@@ -4,12 +4,12 @@ DROP table PRESCRIPTION;
 
 CREATE table Aliment (
 	id int,
-    nom varchar(500),
-     satisfaction int,
-    calories int,
-    calcium int,
-    vitamineC int,
-    fer int
+	nom varchar(500),
+	satisfaction int,
+	calories int,
+	calcium int,
+	vitamineC int,
+	fer int
 );
 
 CREATE table PATIENT (
